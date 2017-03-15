@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 
@@ -24,7 +25,7 @@ import javafx.util.Duration;
  *
  * @author jibba_000
  */
-public class FXMLDocumentController implements Initializable {
+public class GameBoardController implements Initializable {
 
     private int score = 0;
     Random ran = new Random();
@@ -34,12 +35,14 @@ public class FXMLDocumentController implements Initializable {
     GridPane gridpane;
 
     @FXML
-    private Label label;
+    private Label timeLabel, scoreLabel, highScoreLabel;
     
-
     @FXML
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
 
+    @FXML
+    private AnchorPane anchorPane;
+    
     public void buttonArray() {
         buttonList.add(btn1);
         buttonList.add(btn2);

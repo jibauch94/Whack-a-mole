@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whack.a.mole.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whack.a.mole.GameBoardController">
     <children>
        
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
