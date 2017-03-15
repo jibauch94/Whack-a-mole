@@ -35,6 +35,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Label label;
+    
 
     @FXML
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
@@ -53,12 +54,18 @@ public class FXMLDocumentController implements Initializable {
 
     public void randomPopUp() {
         int btnVisible = ran.nextInt(8) + 1;
+        int btnVisible1 = ran.nextInt(8) + 1;
+        int btnVisible2 = ran.nextInt(8) + 1;
         System.out.println(btnVisible);
+        System.out.println(btnVisible1);
+        System.out.println(btnVisible2);
 
         buttonList.get(btnVisible).setVisible(true);
+        buttonList.get(btnVisible1).setVisible(true);
+        buttonList.get(btnVisible2).setVisible(true);
 
         for (int i = 0; i < buttonList.size(); i++) {
-            if (btnVisible != i + 1) {
+            if (btnVisible != i + 1 && btnVisible1 != i + 1 && btnVisible2 != i + 1) {
                 buttonList.get(i).setVisible(false);
             } else {
                 buttonList.get(i).setVisible(true);
@@ -71,13 +78,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void startGame(ActionEvent event) {
         System.out.println("Game started");
-        label.setText("GO!!!!");
-
+        
         randomPopUp();
         
         Timeline timeline = new Timeline(new KeyFrame(
                 Duration.millis(1000),ae -> randomPopUp()));
-        timeline.setCycleCount(10);
+        timeline.setCycleCount(50);
         timeline.play();
         timeline.setOnFinished(new EventHandler<ActionEvent>(){
         
