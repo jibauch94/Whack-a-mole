@@ -18,13 +18,15 @@ import javafx.stage.Stage;
 public class WhackAMole extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
+    public void start(Stage primarystage) throws Exception {
+        Parent anchor = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
         
-        Scene scene = new Scene(root);
+        anchor.setVisible(true);
         
-        stage.setScene(scene);
-        stage.show();
+        Scene scene = new Scene(anchor);
+        scene.getStylesheets().add(WhackAMole.class.getResource("GameBoard.css").toExternalForm());
+        primarystage.setScene(scene);
+        primarystage.show();
         
     }
 
