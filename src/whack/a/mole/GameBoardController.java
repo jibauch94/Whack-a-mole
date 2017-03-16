@@ -89,8 +89,8 @@ public class GameBoardController implements Initializable {
         timeline.setCycleCount(50);
         timeline.play();
         timeline.setOnFinished(new EventHandler<ActionEvent>(){
-        
-    
+            
+            
             public void handle(ActionEvent event) {
                 System.out.println("Finished!");
                 for (Button button : buttonList) {
@@ -102,6 +102,11 @@ public class GameBoardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         buttonArray();
+    }
+    @FXML
+    private void buttonClick(ActionEvent event){
+        score++;
+        scoreLabel.setText("" + score);
     }
 
 }
