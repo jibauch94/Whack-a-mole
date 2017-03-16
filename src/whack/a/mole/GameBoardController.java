@@ -56,9 +56,9 @@ public class GameBoardController implements Initializable {
     }
 
     public void randomPopUp() {
-        int btnVisible = ran.nextInt(8) + 1;
-        int btnVisible1 = ran.nextInt(8) + 1;
-        int btnVisible2 = ran.nextInt(8) + 1;
+        int btnVisible = ran.nextInt(buttonList.size());
+        int btnVisible1 = ran.nextInt(buttonList.size());
+        int btnVisible2 = ran.nextInt(buttonList.size());
         System.out.println(btnVisible);
         System.out.println(btnVisible1);
         System.out.println(btnVisible2);
@@ -68,7 +68,7 @@ public class GameBoardController implements Initializable {
         buttonList.get(btnVisible2).setVisible(true);
 
         for (int i = 0; i < buttonList.size(); i++) {
-            if (btnVisible != i + 1 && btnVisible1 != i + 1 && btnVisible2 != i + 1) {
+            if (btnVisible != i && btnVisible1 != i && btnVisible2 != i) {
                 buttonList.get(i).setVisible(false);
             } else {
                 buttonList.get(i).setVisible(true);

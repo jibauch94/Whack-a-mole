@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whack.a.mole.GameBoardController">
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whack.a.mole.GameBoardController">
     <children>
        
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <GridPane layoutX="8.0" layoutY="8.0" prefHeight="411.0" prefWidth="446.0">
+      <GridPane layoutX="8.0" layoutY="8.0" prefHeight="487.0" prefWidth="604.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,20 +23,20 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btn7" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.rowIndex="2" />
-            <Button fx:id="btn2" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="1" />
-            <Button fx:id="btn3" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="2" />
-            <Button fx:id="btn6" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="btn5" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn4" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.rowIndex="1" />
-            <Button fx:id="btn1" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" />
-            <Button fx:id="btn9" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="btn8" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="145.0" prefWidth="163.0" text="Button" GridPane.columnIndex="1" />
+            <Button fx:id="btn3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="145.0" prefWidth="163.0" text="Button" GridPane.columnIndex="2" />
+            <Button fx:id="btn6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="145.0" prefWidth="163.0" text="Button" GridPane.rowIndex="1" />
+            <Button fx:id="btn1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="145.0" prefWidth="163.0" text="Button" />
+            <Button fx:id="btn9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="139.0" prefWidth="158.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="btn8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="75.0" prefWidth="176.0" text="Button" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Label fx:id="timeLabel" layoutX="507.0" layoutY="63.0" prefHeight="50.0" prefWidth="81.0" text="Time left" />
-      <Label fx:id="scoreLabel" layoutX="507.0" layoutY="137.0" prefHeight="50.0" prefWidth="81.0" text="Score" />
-      <Label fx:id="highScoreLabel" layoutX="507.0" layoutY="201.0" prefHeight="50.0" prefWidth="81.0" text="HighScore" />
-      <Button fx:id="startGame" layoutX="537.0" layoutY="520.0" mnemonicParsing="false" onAction="#startGame" text="startGame" />
+      <Label fx:id="timeLabel" layoutX="686.0" layoutY="47.0" prefHeight="50.0" prefWidth="81.0" text="Time left" />
+      <Label fx:id="scoreLabel" layoutX="686.0" layoutY="157.0" prefHeight="50.0" prefWidth="81.0" text="Score" />
+      <Label fx:id="highScoreLabel" layoutX="686.0" layoutY="242.0" prefHeight="50.0" prefWidth="81.0" text="HighScore" />
+      <Button fx:id="startGame" layoutX="588.0" layoutY="545.0" mnemonicParsing="false" onAction="#startGame" text="startGame" />
     </children>
 </AnchorPane>

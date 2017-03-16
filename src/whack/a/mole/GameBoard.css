@@ -11,3 +11,9 @@ and open the template in the editor.
     -fx-background-size: cover;
 }
 
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9 {-fx-background-image: url("diglett.png") no-repeat center center fixed;
+    -fx-background-size: cover;
+    -fx-background-color: null;
+}
+
+
