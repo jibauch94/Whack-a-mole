@@ -5,8 +5,10 @@
  */
 package whack.a.mole;
 
+import com.sun.javaws.ui.SplashScreen;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.animation.KeyFrame;
@@ -17,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
@@ -28,6 +31,10 @@ import javafx.util.Duration;
 public class GameBoardController implements Initializable {
 
     private int score = 0;
+    private int cycleCount = 10;
+    private int duration = 1000;
+   
+    
     Random ran = new Random();
     private ArrayList<Button> buttonList = new ArrayList<>();
 
@@ -36,13 +43,13 @@ public class GameBoardController implements Initializable {
 
     @FXML
     private Label timeLabel, scoreLabel, highScoreLabel;
-    
+
     @FXML
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    private Button startGame, restartGame, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
 
     @FXML
     private AnchorPane anchorPane;
-    
+
     public void buttonArray() {
         buttonList.add(btn1);
         buttonList.add(btn2);
@@ -79,34 +86,46 @@ public class GameBoardController implements Initializable {
     }
 
     @FXML
-    private void startGame(ActionEvent event) {
+    private void startGame() {
         System.out.println("Game started");
-        
+
+        startGame.setVisible(false);
+        scoreLabel.setText("0");
+        timeLabel.setText("50");
         randomPopUp();
-        
+
         Timeline timeline = new Timeline(new KeyFrame(
-                Duration.millis(1000),ae -> randomPopUp()));
-        timeline.setCycleCount(50);
+                Duration.millis(duration), ae -> randomPopUp()));
+        timeline.setCycleCount(cycleCount);
         timeline.play();
-        timeline.setOnFinished(new EventHandler<ActionEvent>(){
-            
-            
+        timeline.setOnFinished(new EventHandler<ActionEvent>() {
+
             public void handle(ActionEvent event) {
                 System.out.println("Finished!");
                 for (Button button : buttonList) {
                     button.setVisible(false);
+                    restartGame.setVisible(true);
                 }
-        }
-        });}
+            }
+        });
+    }
     
+    @FXML
+    private void restartGame(){
+        startGame();
+        restartGame.setVisible(false);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        restartGame.setVisible(false); //først synlig når spil er kørt 1 gang
         buttonArray();
-    }
+        }
+
     @FXML
-    private void buttonClick(ActionEvent event){
+    private void buttonClick(ActionEvent event) {
         score++;
         scoreLabel.setText("" + score);
-    }
+        }
 
 }
