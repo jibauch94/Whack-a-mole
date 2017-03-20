@@ -35,15 +35,15 @@
             <Button fx:id="btn7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonClick" prefHeight="75.0" prefWidth="176.0" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Label fx:id="timeLabel" layoutX="686.0" layoutY="47.0" prefHeight="50.0" prefWidth="81.0" text="Time left">
+      <Label fx:id="timeLabel" layoutX="642.0" layoutY="47.0" prefHeight="50.0" prefWidth="125.0" text="Time left">
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Label fx:id="scoreLabel" layoutX="686.0" layoutY="157.0" prefHeight="50.0" prefWidth="81.0" text="Score">
+      <Label fx:id="scoreLabel" layoutX="642.0" layoutY="157.0" prefHeight="50.0" prefWidth="125.0" text="Score">
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Label fx:id="highScoreLabel" layoutX="686.0" layoutY="242.0" prefHeight="50.0" prefWidth="81.0" text="HighScore">
+      <Label fx:id="highScoreLabel" layoutX="642.0" layoutY="242.0" prefHeight="50.0" prefWidth="125.0" text="HighScore">
          <font>
             <Font size="30.0" />
          </font></Label>

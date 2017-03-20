@@ -31,9 +31,10 @@ import javafx.util.Duration;
 public class GameBoardController implements Initializable {
 
     private int score = 0;
-    private int cycleCount = 10;
-    private int duration = 1000;
-   
+    private int highScore = 0;
+    private int cycleCount = 5;
+    private int duration = 5000; 
+    private Button button;
     
     Random ran = new Random();
     private ArrayList<Button> buttonList = new ArrayList<>();
@@ -79,13 +80,14 @@ public class GameBoardController implements Initializable {
         for (int i = 0; i < buttonList.size(); i++) {
             if (btnVisible != i && btnVisible1 != i && btnVisible2 != i) {
                 buttonList.get(i).setVisible(false);
+              
             } else {
                 buttonList.get(i).setVisible(true);
             }
-
-        }
-
-    }
+        
+          
+        }}          
+    
 
     @FXML
     private void startGame() {
@@ -93,7 +95,6 @@ public class GameBoardController implements Initializable {
 
         startGame.setVisible(false);
         scoreLabel.setText("0");
-        //timeLabel.setText("50");
         randomPopUp();
 
         Timeline timeline = new Timeline(new KeyFrame(
@@ -107,6 +108,7 @@ public class GameBoardController implements Initializable {
                 for (Button button : buttonList) {
                     button.setVisible(false);
                     restartGame.setVisible(true);
+                    
                 }
             }
         });
@@ -122,15 +124,22 @@ public class GameBoardController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         restartGame.setVisible(false); //først synlig når spil er kørt 1 gang
         buttonArray();
-        }
+    }
 
     @FXML
-    private void buttonClick(ActionEvent event) {
+    private void buttonClick() {       
         score++;
         scoreLabel.setText("" + score);
-        }
+    }
+        
 private void cycleCountDown(){
     cycleCount--;
     timeLabel.setText("" + cycleCount);
+    }
+private void highScore(){
+    if(score > highScore){
+        highScoreLabel.setText("HighScore: " + score);
+    
+    }
 }
 }
