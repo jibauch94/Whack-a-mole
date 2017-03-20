@@ -69,6 +69,8 @@ public class GameBoardController implements Initializable {
         System.out.println(btnVisible);
         System.out.println(btnVisible1);
         System.out.println(btnVisible2);
+        
+        cycleCountDown();
 
         buttonList.get(btnVisible).setVisible(true);
         buttonList.get(btnVisible1).setVisible(true);
@@ -91,7 +93,7 @@ public class GameBoardController implements Initializable {
 
         startGame.setVisible(false);
         scoreLabel.setText("0");
-        timeLabel.setText("50");
+        //timeLabel.setText("50");
         randomPopUp();
 
         Timeline timeline = new Timeline(new KeyFrame(
@@ -127,5 +129,8 @@ public class GameBoardController implements Initializable {
         score++;
         scoreLabel.setText("" + score);
         }
-
+private void cycleCountDown(){
+    cycleCount--;
+    timeLabel.setText("" + cycleCount);
+}
 }
