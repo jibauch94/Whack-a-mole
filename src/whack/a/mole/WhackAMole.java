@@ -7,10 +7,8 @@ package whack.a.mole;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.ImageCursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -26,9 +24,6 @@ public class WhackAMole extends Application {
         anchor.setVisible(true);
         
         Scene scene = new Scene(anchor);
-//        Image image = new Image("hammer.png");  
-//        ImageCursor cursor = new ImageCursor(image);
-//        scene.setCursor(cursor);
         scene.getStylesheets().add(WhackAMole.class.getResource("GameBoard.css").toExternalForm());
         
         primarystage.setScene(scene);

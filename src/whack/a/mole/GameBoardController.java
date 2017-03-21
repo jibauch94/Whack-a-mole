@@ -5,10 +5,8 @@
  */
 package whack.a.mole;
 
-import com.sun.javaws.ui.SplashScreen;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.animation.KeyFrame;
@@ -19,7 +17,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
@@ -32,9 +29,8 @@ public class GameBoardController implements Initializable {
 
     private int score = 0;
     private int highScore = 0;
-    private int cycleCount = 5;
-    private int duration = 5000; 
-    private Button button;
+    private int cycleCount = 10;
+    private int duration = 1000; 
     
     Random ran = new Random();
     private ArrayList<Button> buttonList = new ArrayList<>();
