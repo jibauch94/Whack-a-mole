@@ -58,6 +58,12 @@ public class GameBoardController implements Initializable {
         buttonList.add(btn8);
         buttonList.add(btn9);
     }
+    
+    /**
+     * randomPopUp, sørger for at der kommer 1-3 mulvarpe op pr. cycle
+     * hvis btnVisible er forskellig fra 1 vil knappen blive vist
+     * indeholder også metoden cycleCount, dvs. at for hvert popup bliver antal runder tilbage talt ned
+     */
 
     public void randomPopUp() {
         int btnVisible = ran.nextInt(buttonList.size());
@@ -66,6 +72,7 @@ public class GameBoardController implements Initializable {
         System.out.println(btnVisible);
         System.out.println(btnVisible1);
         System.out.println(btnVisible2);
+        System.out.println("-----------------------------------");
         
         cycleCountDown();
 
@@ -85,12 +92,18 @@ public class GameBoardController implements Initializable {
         }}          
     
 
+    /**
+     * startGame metoden
+     * 
+     */
+    
     @FXML
     private void startGame() {
         System.out.println("Game started");
 
         startGame.setVisible(false);
         scoreLabel.setText("0");
+
         randomPopUp();
 
         Timeline timeline = new Timeline(new KeyFrame(
